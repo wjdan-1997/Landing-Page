@@ -12,7 +12,7 @@
  * JS Standard: ESlint
  * 
  */
-
+// addActiveClass(one);
 
 /**
  * Define Global Variables
@@ -40,6 +40,9 @@ document.addEventListener('DOMContentLoaded', function buildNav() {
             let liTag = document.createElement('li');
             liTag.setAttribute('class', 'navLink');
 
+            let liTagId = 'li_' + one.getAttribute('id');
+            liTag.setAttribute('id', liTagId)
+
             aLinkTag.textContent = one.getAttribute('data-nav'); // take the value
 
 
@@ -47,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function buildNav() {
                 one.scrollIntoView({
                     "behavior": 'smooth'
                 });
-                addActiveClass(one);
+
             });
 
 
@@ -94,12 +97,18 @@ function SetActiveSection() {
     for (one of allSections) {
         isOneInViewPort = isInViewPort(one);
         console.log('is section in view port: ', isOneInViewPort);
+
+        let liTagId = 'li_' + one.getAttribute('id');
+        let liTag = document.getElementById(liTagId);
+
         if (isOneInViewPort) {
             //if true  add the class that will  change the color 
-
             one.classList.add("isActive");
+            liTag.classList.add("isActive");
+
         } else {
             one.classList.remove("isActive");
+            liTag.classList.remove("isActive");
             // if false remove the class 
         }
     };

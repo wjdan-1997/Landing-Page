@@ -110,7 +110,7 @@
     }
     
     .nav-menu .navLink:hover {
-        background: rgb(184, 177, 177);
+        background: rgb(184, 177, 177); 
         color: #fff;
         transition: ease 0.3s all;
     }
@@ -121,7 +121,7 @@
         position: fixed;
         top: 0;
         width: 100%;
-        /* z-index: 0; */
+        z-index: 1;
     }
     /* Footer Styles */
     
@@ -567,7 +567,8 @@
     /* Style of Class Active */
     
     .isActive {
-        background: linear-gradient(0deg, rgb(221, 207, 81) 0%, rgb(126, 128, 134) 100%);
+        background: 
+        linear-gradient(0deg, rgba(223, 197, 54, 0.411) 0%, rgba(217, 228, 176, 0.281) 100%);
     }
     
     @media (min-width: 1200px) {
@@ -626,6 +627,12 @@
             align-items: center;
         }
         .index-page-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .index-stories {
             display: flex;
             flex-direction: column;
             justify-content: center;
