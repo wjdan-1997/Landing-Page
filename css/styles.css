@@ -73,7 +73,7 @@
     /* ---- Layout Rules ---- */
     
     main {
-        margin: 10vh 1em 10vh;
+        margin: 3vh 1em 4vh;
     }
     
     .main-hero {
@@ -118,7 +118,7 @@
     
     .pageHeader {
         background: rgba(73, 72, 72, 0.281);
-        position: fixed;
+        /* position: fixed; */
         top: 0;
         width: 100%;
         z-index: 1;
@@ -568,7 +568,7 @@
     
     .isActive {
         background: 
-        linear-gradient(0deg, rgba(223, 197, 54, 0.411) 0%, rgba(217, 228, 176, 0.281) 100%);
+        linear-gradient(0deg, rgba(225, 154, 240, 0.411) 0%, rgba(199, 219, 127, 0.281) 100%);
     }
     
     @media (min-width: 1200px) {
